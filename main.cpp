@@ -1,8 +1,8 @@
 
 
-#include "SDLCHandler.h"
+#include "SDLCHandlerUnitTest.h"
 
-int main() {
-  SdlcHandler sdlc_handler{};
-  sdlc_handler.PatchExtendTime();
+auto main() -> int {
+  ::testing::InitGoogleTest();
+  return RUN_ALL_TESTS();
 }

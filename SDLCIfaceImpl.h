@@ -5,9 +5,10 @@
 
 #include "SDLCIface.h"
 
-class SdlcIfaceImpl : public SdlcIface {
+class SdlcIfaceImpl final : public SdlcIface {
 public:
-  [[nodiscard]] ESdlcStatus PatchExtendTime(float extend_time) override {
+  [[nodiscard]] auto PatchExtendTime(float extend_time) noexcept
+      -> ESdlcStatus override {
     extend_time_ = extend_time;
     return ESdlcStatus::kOk;
   }
